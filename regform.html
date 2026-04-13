@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f4f8;
+        margin: 0;
+        padding: 40px;
+    }
+
+    form {
+        max-width: 500px;
+        margin: auto;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    .inline {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .inline label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    .inline input {
+        width: auto;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    button {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .primary {
+        background: #0077cc;
+        color: white;
+    }
+
+    .secondary {
+        background: #eee;
+    }
+
+    .toggle {
+        margin-top: 5px;
+        font-size: 12px;
+        background: none;
+        border: none;
+        color: #0077cc;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<form>
+
+<h1>Registration Form</h1>
+
+<div class="group">
+<label>Full Name</label>
+<input type="text" id="fullName" placeholder="Enter Full Name">
+</div>
+
+<div class="group">
+<label>Email</label>
+<input type="text" id="email" placeholder="Enter Email">
+</div>
+
+<div class="group">
+<label>Password</label>
+<input type="password" id="psw" placeholder="Enter Password">
+</div>
+
+<div class="group">
+<label>Confirm Password</label>
+<input type="password" id="psw-repeat" placeholder="Confirm Password">
+<button type="button" class="toggle" onclick="togglePassword()">Show / Hide Password</button>
+</div>
+
+<div class="group">
+<label>Age</label>
+<input type="number" id="age" placeholder="Enter Age">
+</div>
+
+<div class="group">
+<label>Gender</label>
+<div class="inline">
+<label><input type="radio" name="gender" id="male"> Male</label>
+<label><input type="radio" name="gender" id="female"> Female</label>
+<label><input type="radio" name="gender" id="other"> Other</label>
+</div>
+</div>
+
+<div class="group">
+<label>Country</label>
+<select id="country">
+    <option>REPUBLIC OF CONGO</option>
+    <option>JAPAN</option>
+    <option>SOUTH KOREA</option>
+    <option>NORTH KOREA</option>
+    <option>CHINA</option>
+    <option>CZECH REPUBLIC</option>
+    <option>VATICAN CITY</option>
+    <option>SUMMONER'S RIFT</option>
+    <option>BITTER LAKE</option>
+    <option>DE DUST2</option>
+    <option>THE PARISH</option>
+</select>
+</div>
+
+<div class="group">
+<label><input type="checkbox" id="agree"> I agree to Terms & Privacy</label>
+</div>
+
+<div class="buttons">
+<button type="button">Clear Form</button>
+<button type="submit" class="primary" onclick="RegistrationSummary(event)">Register</button>
+</div>
+
+</form>
+
+<script>
+function togglePassword() {
+    let pass = document.getElementById("psw");
+    let confirm = document.getElementById("psw-repeat");
+
+    if (pass.type === "password") {
+        pass.type = "text";
+        confirm.type = "text";
+    } else {
+        pass.type = "password";
+        confirm.type = "password";
+    }
+}
+
+function RegistrationSummary(event){
+    event.preventDefault();
+
+    let name = document.getElementById("fullName").value;
+    let email = document.getElementById("email").value;
+    let psw = document.getElementById("psw").value;
+    let psw_repeat = document.getElementById("psw-repeat").value;
+    let age = document.getElementById("age").value;
+    let country = document.getElementById("country").value;
+
+    let gender = "";
+    if (document.getElementById("male").checked) {
+        gender = "Male";
+    }
+    else if (document.getElementById("female").checked) {
+        gender = "Female";
+    }
+    else if (document.getElementById("other").checked) {
+        gender = "Other";
+    }
+
+    if (psw !== psw_repeat) {
+        alert("Passwords do not match.");
+        return;
+    }
+
+    alert(
+        "REGISTRATION SUMMARY\n" +
+        "----------------------------\n" +
+        "Full Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Age: " + age + "\n" +
+        "Gender: " + gender + "\n" +
+        "Country: " + country + "\n\n" +
+        "TERMS & CONDITIONS\n" +
+        "----------------------------\n" +
+        "By creating an account, you agree that all information provided is true and accurate.\n" +
+        "You also agree to follow the platform rules and privacy policy."
+    );
+}
+</script>
+
+</body>
+</html>
