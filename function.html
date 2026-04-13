@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FUNCTIONS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #e6f2ff;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 800px;
+            background: #0b3c5d;
+            color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #cce7ff;
+            color: #0b3c5d;
+            border: none;
+            padding: 8px 14px;
+            margin: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #99d0ff;
+        }
+
+        input {
+            padding: 6px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .output {
+            background: #e6f2ff;
+            color: #000;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 8px;
+        }
+
+        #light {
+            background: gray;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>JavaScript Functions Demo</h1>
+
+    <section>
+        <button onclick="alert('Hello BSCS1D!')">Alert</button>
+        <button onclick="sayHello()">Function</button>
+        <div class="output" id="out1"></div>
+    </section>
+
+    <section>
+        <p id="text">Click to change text</p>
+        <button onclick="changeText()">Change Text</button>
+    </section>
+
+    <section>
+        <p>Count: <span id="count">0</span></p>
+        <button onclick="addCount()">Click</button>
+    </section>
+
+    <section>
+        <input id="name" placeholder="Name">
+        <button onclick="greetUser()">Greet</button>
+        <div class="output" id="greet"></div>
+    </section>
+
+    <section>
+        <input id="age" type="number" placeholder="Age">
+        <button onclick="checkAge()">Check</button>
+        <div class="output" id="ageOut"></div>
+    </section>
+
+    <section>
+        <input id="n1" type="number" placeholder="Num 1">
+        <input id="n2" type="number" placeholder="Num 2">
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mul()">*</button>
+        <div class="output" id="mathOut"></div>
+    </section>
+
+    <section>
+        <div id="light">OFF</div>
+        <button onclick="toggle()">Toggle</button>
+    </section>
+
+    <section>
+        <button onclick="loop()">Count 1-5</button>
+        <ul id="list"></ul>
+    </section>
+
+    <section>
+        <button onclick="variables()">Variables</button>
+        <button onclick="math()">10 + 5</button>
+        <button onclick="grade()">Grade</button>
+        <button onclick="askName()">Prompt</button>
+        <input id="score" type="number" placeholder="Score">
+        <div class="output" id="final"></div>
+    </section>
+
+</div>
+
+<script>
+let count = 0;
+let lightOn = false;
+let clicks = 0;
+const app = "Demo";
+
+function sayHello() {
+    let msg = "Hello from function!";
+    document.getElementById("out1").innerHTML = msg;
+}
+
+function changeText() {
+    document.getElementById("text").innerHTML = "Changed at " + new Date().toLocaleTimeString();
+}
+
+function addCount() {
+    count++;
+    document.getElementById("count").innerHTML = count;
+}
+
+function greetUser() {
+    let name = document.getElementById("name").value || "Guest";
+    document.getElementById("greet").innerHTML = "Hello, " + name;
+}
+
+function checkAge() {
+    let age = document.getElementById("age").value;
+    document.getElementById("ageOut").innerHTML = age >= 18 ? "Adult" : "Minor";
+}
+
+function add() {
+    let a = Number(n1.value);
+    let b = Number(n2.value);
+    document.getElementById("mathOut").innerHTML = a + b;
+}
+
+function sub() {
+    let a = Number(n1.value);
+    let b = Number(n2.value);
+    document.getElementById("mathOut").innerHTML = a - b;
+}
+
+function mul() {
+    let a = Number(n1.value);
+    let b = Number(n2.value);
+    document.getElementById("mathOut").innerHTML = a * b;
+}
+
+function toggle() {
+    lightOn = !lightOn;
+    let box = document.getElementById("light");
+    box.innerHTML = lightOn ? "ON" : "OFF";
+    box.style.background = lightOn ? "#99d0ff" : "gray";
+}
+
+function loop() {
+    let list = document.getElementById("list");
+    list.innerHTML = "";
+    for (let i = 1; i <= 5; i++) {
+        list.innerHTML += "<li>" + i + "</li>";
+    }
+}
+
+function variables() {
+    clicks++;
+    document.getElementById("final").innerHTML = "Clicks: " + clicks + "<br>App: " + app;
+}
+
+function math() {
+    document.getElementById("final").innerHTML = "10 + 5 = " + (10 + 5);
+}
+
+function grade() {
+    let s = Number(document.getElementById("score").value);
+    let g = s >= 90 ? "A" : s >= 80 ? "B" : s >= 70 ? "C" : s >= 60 ? "D" : "F";
+    document.getElementById("final").innerHTML = "Grade: " + g;
+}
+
+function askName() {
+    let name = prompt("Enter name:");
+    if (name) {
+        document.getElementById("final").innerHTML = "Hello, " + name;
+    }
+}
+</script>
+
+</body>
+</html>
