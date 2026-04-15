@@ -125,21 +125,7 @@
     <p id="message"></p>
 </div>
 
-<script>
-function submitLab(event) {
-    event.preventDefault();
 
-    let labCount = localStorage.getItem("labCount") || 0;
-    labCount++;
-    localStorage.setItem("labCount", labCount);
-
-    let total = localStorage.getItem("totalUploads") || 0;
-    total++;
-    localStorage.setItem("totalUploads", total);
-
-    document.getElementById("message").textContent = "Lab uploaded successfully!";
-}
-</script>
 
 </body>
 </html>
