@@ -1,126 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Lab Upload</title>
+<meta charset="UTF-8">
+<title>Quiz</title>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #001b33, #002b4d);
+        color: #d6ecff;
+    }
 
-        body {
-            background-color: #022C63;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+    .navbar {
+        background-color: #9ccdff;
+        padding: 12px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+    }
 
-        /* NAVBAR */
-        .navbar {
-            background-color: #9ccdff;
-            padding: 15px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
+    .navbar a {
+        color: #022C63;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 12px;
+        font-size: 14px;
+    }
 
-        .navbar a {
-            color: #022C63;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            font-size: 14px;
-        }
+    .navbar a:hover {
+        color: white;
+    }
 
-        .navbar a:hover {
-            color: white;
-        }
+    h1 {
+        text-align: center;
+        margin: 25px 0;
+        color: #9ccdff;
+    }
 
-        
-        .container {
-            border: 5px solid rgb( 0, 22, 54);
-            width: 900px;
-            max-width: 90%;
-            padding: 30px;
-            background-color: rgb(0, 80, 105);
-            margin: 50px auto;
-            color: #bbddff;
-        }
+    
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+    }
 
-        h1 {
-            text-align: center;
-            color: #bbddff;
-        }
+    /* CARD */
+    .card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(156,205,255,0.25);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.25s ease;
+    }
 
-        .form-group {
-            margin: 20px 0;
-        }
+    /* GLOW HOVER */
+    .card:hover {
+        transform: translateY(-6px) scale(1.02);
+        border-color: rgba(156,205,255,0.8);
+        box-shadow:
+            0 0 15px rgba(156,205,255,0.35),
+            0 10px 25px rgba(0,0,0,0.5);
+    }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
+    .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
 
-        input[type="text"],
-        input[type="file"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-        }
+    .card:hover img {
+        transform: scale(1.06);
+        filter: brightness(1.1) saturate(1.2);
+    }
 
-        textarea {
-            resize: none;
-            height: 100px;
-        }
+    .card p {
+        text-align: center;
+        padding: 12px;
+        margin: 0;
+        font-weight: bold;
+        background: rgba(0,0,0,0.25);
+        color: #d6ecff;
+    }
 
-        button {
-            background-color: #9ccdff;
-            color: #022C63;
-            padding: 12px;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #aaff33;
-        }
-
-        #message {
-            text-align: center;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
     <a href="index.html">Home</a>
     <a href="dashboard.html">Dashboard</a>
     <a href="quiz.html">Quiz</a>
     <a href="laboratory.html">Lab</a>
     <a href="exam.html">Exam</a>
-
-    <!-- LAB PROJECTS -->
-   
 </div>
 
-<div class="container">
-    <h1>Quiz Upload</h1>
-   
+<h1>Quiz Gallery</h1>
 
-    <p id="message"></p>
+<div class="gallery">
+
+  
+    <a class="card" href="Qimages/q1.jpg" target="_blank">
+        <img src="Qimages/q1.jpg">
+        <p>Quiz 1</p>
+    </a>
+
+    <a class="card" href="Qimages/q1.jpg" target="_blank">
+        <img src="Qimages/q2.jpg">
+        <p>Quiz 2</p>
+    </a>
+
+    <a class="card" href="Qimages/q1.jpg" target="_blank">
+        <img src="Qimages/q3.jpg">
+        <p>Quiz 3</p>
+    </a>
+    
+     <a class="card" href="Qimages/q1.jpg" target="_blank">
+        <img src="Qimages/car.jpg">
+        <p>Carousel</p>
+    </a>
+
 </div>
-
-
 
 </body>
-</html>
+</html
