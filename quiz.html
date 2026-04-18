@@ -8,30 +8,32 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-  background-image: url("moszenbg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; 
-
- }
-   
+        background-image: url("moszenbg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
     }
 
+    /* NAVBAR */
     .navbar {
         background-color: #9ccdff;
         padding: 12px 0;
         text-align: center;
         position: sticky;
         top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
     .navbar a {
         color: #022C63;
         text-decoration: none;
         font-weight: bold;
-        margin: 0 12px;
+        margin: 0 15px;
         font-size: 14px;
+        padding: 6px 10px;
+        border-radius: 6px;
     }
 
     h1 {
@@ -40,39 +42,32 @@
         color: #9ccdff;
     }
 
-    .gallery {
-        display: flex;
-        flex-direction: column;
+    /* TILE CONTAINER */
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 20px;
-        padding: 20px;
-        max-width: 600px;
+        max-width: 700px;
         margin: auto;
+        padding: 20px;
     }
 
-    .card {
-        display: block;
+    /* STATIC TILE (NO HOVER) */
+    .tile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
         text-decoration: none;
-        color: inherit;
-        background: rgba(255,255,255,0.04);
-        border: 1px solid rgba(156,205,255,0.25);
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .card img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        display: block;
-    }
-
-    .card p {
-        text-align: center;
-        padding: 10px;
-        margin: 0;
+        font-size: 18px;
         font-weight: bold;
-        background: rgba(0,0,0,0.25);
         color: #d6ecff;
+
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(156, 205, 255, 0.3);
+        border-radius: 12px;
+
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
 </style>
@@ -88,28 +83,24 @@
     <a href="exam.html">Exam</a>
 </div>
 
-<h1>Quiz </h1>
+<h1>Quiz</h1>
 
-<div class="gallery">
+<div class="menu">
 
-    <a class="card" href="Qimages/q1.jpg" target="_blank">
-        <img src="Qimages/q1.jpg">
-        <p>Quiz 1</p>
+    <a class="tile" href="Qimages/q1.jpg" target="_blank">
+        Quiz 1
     </a>
 
-    <a class="card" href="Qimages/q2.jpg" target="_blank">
-        <img src="Qimages/q2.jpg">
-        <p>Quiz 2</p>
+    <a class="tile" href="Qimages/q2.jpg" target="_blank">
+        Quiz 2
     </a>
 
-    <a class="card" href="Qimages/q3.jpg" target="_blank">
-        <img src="Qimages/q3.jpg">
-        <p>Quiz 3</p>
+    <a class="tile" href="Qimages/q3.jpg" target="_blank">
+        Quiz 3
     </a>
 
-    <a class="card" href="Qimages/car.jpg" target="_blank">
-        <img src="Qimages/car.jpg">
-        <p>Carousel</p>
+    <a class="tile" href="Qimages/car.jpg" target="_blank">
+        Carousel
     </a>
 
 </div>
