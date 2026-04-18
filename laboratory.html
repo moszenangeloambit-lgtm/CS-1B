@@ -1,131 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Lab Upload</title>
+<meta charset="UTF-8">
+<title>Lab Upload</title>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+<style>
+html {
+    scroll-behavior: smooth;
+}
 
-        body {
-            background-color: #022C63;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("moszenbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-        /* NAVBAR */
-        .navbar {
-            background-color: #9ccdff;
-            padding: 15px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
+.navbar {
+    background-color: #9ccdff;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
 
-        .navbar a {
-            color: #022C63;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            font-size: 14px;
-        }
+.navbar a {
+    color: #022C63;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 14px;
+}
 
-        .navbar a:hover {
-            color: white;
-        }
+.container {
+    width: 900px;
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 30px;
 
-        
-        .container {
-            border: 5px solid rgb( 0, 22, 54);
-            width: 900px;
-            max-width: 90%;
-            padding: 30px;
-            background-color: rgb(0, 80, 105);
-            margin: 50px auto;
-            color: #bbddff;
-        }
+    border: 3px solid #87CEFA;
+    color: #bbddff;
+}
 
-        h1 {
-            text-align: center;
-            color: #bbddff;
-        }
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
 
-        .form-group {
-            margin: 20px 0;
-        }
+.activity {
+    background-color: rgba(0, 20, 40, 0.6);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #9ccdff;
+}
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
+.activity p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
 
-        input[type="text"],
-        input[type="file"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-        }
-
-        textarea {
-            resize: none;
-            height: 100px;
-        }
-
-        button {
-            background-color: #9ccdff;
-            color: #022C63;
-            padding: 12px;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #aaff33;
-        }
-
-        #message {
-            text-align: center;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
+.activity a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #9ccdff;
+    color: #022C63;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
     <a href="index.html">Home</a>
     <a href="dashboard.html">Dashboard</a>
     <a href="quiz.html">Quiz</a>
     <a href="laboratory.html">Lab</a>
     <a href="exam.html">Exam</a>
-
-    <!-- LAB PROJECTS -->
-   
 </div>
 
 <div class="container">
+
     <h1>Laboratory Upload</h1>
-    <p>Carousel Activity: </p>
-    <a href="carousel.html">Carousel</a>
-     <p>Java Functions:</p>
-    <a href="function.html">Functions</a>
-     <p>Register Form:</p>
-    <a href="regform.html">Register Form</a>
 
-    <p id="message"></p>
+    <div class="activity">
+        <p>Carousel Activity</p>
+        <a href="carousel.html">Project</a>
+    </div>
+
+    <div class="activity">
+        <p>Java Functions</p>
+        <a href="function.html">Project</a>
+    </div>
+
+    <div class="activity">
+        <p>Register Form</p>
+        <a href="regform.html">Project</a>
+    </div>
+
 </div>
-
-
 
 </body>
 </html>
