@@ -1,126 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Lab Upload</title>
+<meta charset="UTF-8">
+<title>Quiz</title>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("bg3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
 
-        body {
-            background-color: #022C63;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+  
+    .navbar {
+        background-color: #9ccdff;
+        padding: 12px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .navbar a {
+        color: #022C63;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 15px;
+        font-size: 14px;
+        padding: 6px 10px;
+        border-radius: 6px;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 25px 0;
+        color: #9ccdff;
+    }
 
    
-        .navbar {
-            background-color: #9ccdff;
-            padding: 15px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        max-width: 700px;
+        margin: auto;
+        padding: 20px;
+    }
 
-        .navbar a {
-            color: #022C63;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            font-size: 14px;
-        }
+ 
+    .tile {
+        display: flex;
+justify-content: center;
+align-items: center;
+height: 120px;
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+color: #d6ecff;
 
-        .navbar a:hover {
-            color: white;
-        }
+border: 5px solid #004969;
 
         
-        .container {
-            border: 5px solid rgb( 0, 22, 54);
-            width: 900px;
-            max-width: 90%;
-            padding: 30px;
-            background-color: rgb(0, 80, 105);
-            margin: 50px auto;
-            color: #bbddff;
-        }
+    }
 
-        h1 {
-            text-align: center;
-            color: #bbddff;
-        }
-
-        .form-group {
-            margin: 20px 0;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="file"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-        }
-
-        textarea {
-            resize: none;
-            height: 100px;
-        }
-
-        button {
-            background-color: #9ccdff;
-            color: #022C63;
-            padding: 12px;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #aaff33;
-        }
-
-        #message {
-            text-align: center;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
     <a href="index.html">Home</a>
     <a href="dashboard.html">Dashboard</a>
     <a href="quiz.html">Quiz</a>
     <a href="laboratory.html">Lab</a>
     <a href="exam.html">Exam</a>
-
-    <!-- LAB PROJECTS -->
-   
 </div>
 
-<div class="container">
-    <h1>Exam Upload</h1>
-   
+<h1>Quiz</h1>
 
-    <p id="message"></p>
+<div class="menu">
+
+    <a class="tile" href="Qimages/q1.jpg" target="_blank">
+        Quiz 1
+    </a>
+
+    <a class="tile" href="Qimages/q2.jpg" target="_blank">
+        Quiz 2
+    </a>
+
+    <a class="tile" href="Qimages/q3.jpg" target="_blank">
+        Quiz 3
+    </a>
+
+  
+
 </div>
-
-
 
 </body>
 </html>
